@@ -1,0 +1,5 @@
+{
+  "deno.enable": true,
+  "cmake.ignoreCMakeListsMissing": true,
+  "makefile.extensionOutputFolder": "${workspaceFolder}/.vscode/makefile-tools"
+}

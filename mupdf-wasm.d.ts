@@ -1,9 +1,9 @@
+import type { Pointer } from "./Pointer.ts";
+
 export default libmupdf_wasm;
 declare function libmupdf_wasm(): Promise<Libmupdf>;
-declare const _brand: unique symbol;
-export type Pointer<B> = number & { readonly [_brand]: B };
 export { libmupdf_wasm };
-interface Libmupdf {
+export interface Libmupdf {
   UTF8ToString(ptr: Pointer<"char">): string;
   stringToUTF8(
     str: string,

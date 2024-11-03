@@ -63,6 +63,9 @@
         "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "$env{EMSDK_DIR}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
         "VCPKG_TARGET_TRIPLET": "wasm32-emscripten"
       },
+      "environment": {
+        "EMSCRIPTEN_ROOT": "/usr/local/emsdk/upstream/emscripten"
+      },
       "inherits": [
         "base"
       ],

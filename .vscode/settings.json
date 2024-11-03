@@ -1,5 +1,9 @@
 {
   "deno.enable": true,
   "cmake.ignoreCMakeListsMissing": true,
-  "makefile.extensionOutputFolder": "${workspaceFolder}/.vscode/makefile-tools"
+  "makefile.extensionOutputFolder": "${workspaceFolder}/.vscode/makefile-tools",
+  "files.associations": {
+    "*.yaml": "yaml",
+    "pdf.h": "c"
+  }
 }

@@ -1,11 +1,9 @@
-import { Document } from "./mod.ts";
+import { PDFDocument } from "./mod.ts";
 
 const pdfPath = "sample.pdf";
 const pdfData = await Deno.readFile(pdfPath);
-const pdfDocument = Document.openDocument(pdfData, "application/pdf");
-const index = pdfDocument.countPages();
-for (let i = 0; i < index; i++) {
-  const page = pdfDocument.loadPage(i);
+const pdfDocument = PDFDocument.openDocument(pdfData, "application/pdf");
+for (const page of pdfDocument) {
   const text = page.toStructuredText();
   console.log(text.asText());
 }
